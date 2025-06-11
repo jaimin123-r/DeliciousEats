@@ -3,21 +3,21 @@ import { motion } from "framer-motion";
 
 const About = () => {
   return (
-    <div className="min-h-screen bg-black text-amber-300 font-sans">
+    <div className="min-h-screen bg-gradient-to-r from-amber-600 to-amber-900 text-white font-sans">
 
       {/* Header Section */}
       <motion.div
-        className="py-16 bg-black"
+        className="py-16 bg-gradient-to-r from-amber-600 to-amber-900"
         initial={{ opacity: 0, y: -50 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1 }}
       >
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6 text-amber-400">
+            <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white drop-shadow-lg">
               Recipes That Inspire
             </h2>
-            <p className="text-amber-300 leading-relaxed">
+            <p className="text-white/90 leading-relaxed text-lg">
               Discover recipes that will tantalize your taste buds, with easy-to-follow instructions and visually stunning presentations. Whether you're a beginner or a seasoned chef, there's something for everyone.
             </p>
           </div>
@@ -25,25 +25,25 @@ const About = () => {
       </motion.div>
 
       {/* Video Section */}
-      <div className="py-16 bg-amber-400">
+      <div className="py-16 bg-white">
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-2 gap-8 items-center">
             <motion.div
-              className="space-y-6 text-black"
+              className="space-y-6 text-gray-800"
               initial={{ opacity: 0, x: -50 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 1 }}
             >
-              <h3 className="text-3xl font-bold">
+              <h3 className="text-3xl font-bold bg-gradient-to-r from-amber-600 to-amber-900 bg-clip-text text-transparent">
                 Recipe Videos That Never Miss a Detail
               </h3>
-              <p>
+              <p className="text-gray-700 leading-relaxed">
                 Our videos are designed to guide you step-by-step through every recipe, ensuring that you never miss a critical detail. Experience the joy of cooking like never before.
               </p>
               <div className="flex items-center space-x-4">
                 <motion.button
-                  className="bg-black text-amber-300 p-4 rounded-full hover:bg-amber-600 transition-all"
+                  className="bg-gradient-to-r from-amber-600 to-amber-900 text-white p-4 rounded-full hover:shadow-lg transition-all duration-300"
                   whileHover={{ scale: 1.1 }}
                   whileTap={{ scale: 0.9 }}
                 >
@@ -56,8 +56,8 @@ const About = () => {
                   </svg>
                 </motion.button>
                 <div>
-                  <h4 className="font-bold">Watch Video</h4>
-                  <p className="text-gray-800">Experience the magic of cooking</p>
+                  <h4 className="font-bold text-gray-800">Watch Video</h4>
+                  <p className="text-gray-600">Experience the magic of cooking</p>
                 </div>
               </div>
             </motion.div>
@@ -71,7 +71,7 @@ const About = () => {
               <img
                 src="/img/video/big.png"
                 alt="Recipe"
-                className="col-span-2 rounded-lg shadow-2xl border border-black"
+                className="col-span-2 rounded-lg shadow-2xl border-2 border-amber-200"
               />
             </motion.div>
           </div>
@@ -79,7 +79,7 @@ const About = () => {
       </div>
 
       {/* Featured Recipe Section */}
-      <div className="py-16 bg-black">
+      <div className="py-16 bg-gradient-to-r from-amber-700 to-amber-900">
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-2 gap-8 items-center">
             <motion.div
@@ -89,15 +89,19 @@ const About = () => {
               viewport={{ once: true }}
               transition={{ duration: 1 }}
             >
-              <h3 className="text-3xl font-bold text-amber-400">
+              <h3 className="text-3xl font-bold text-white drop-shadow-md">
                 Featured Recipe of the Month
               </h3>
-              <p className="text-amber-300">
+              <p className="text-white/90 leading-relaxed">
                 This month's featured recipe is a twist on a classic dish that will leave your family and friends speechless. Don't miss out on the opportunity to try it yourself!
               </p>
-              <button className="px-6 py-3 bg-amber-400 text-black font-bold rounded-lg hover:bg-amber-500 transition-all">
+              <motion.button 
+                className="px-6 py-3 bg-white text-amber-800 font-bold rounded-lg hover:bg-amber-50 transition-all duration-300 shadow-lg"
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+              >
                 Explore Featured Recipe
-              </button>
+              </motion.button>
             </motion.div>
             <motion.div
               className="relative"
@@ -109,7 +113,7 @@ const About = () => {
               <img
                 src="/img/video/big_1.png"
                 alt="Featured Recipe"
-                className="rounded-lg shadow-2xl border border-amber-400"
+                className="rounded-lg shadow-2xl border-2 border-white/20"
               />
             </motion.div>
           </div>
@@ -117,10 +121,10 @@ const About = () => {
       </div>
 
       {/* Latest Trend Section */}
-      <div className="py-16 bg-amber-400">
+      <div className="py-16 bg-white">
         <div className="container mx-auto px-4 text-center">
           <motion.p
-            className="text-black mb-4"
+            className="text-gray-600 mb-4 text-lg"
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
@@ -129,7 +133,7 @@ const About = () => {
             Thousands of recipes are waiting to be explored
           </motion.p>
           <motion.h3
-            className="text-3xl font-bold mb-8 text-black"
+            className="text-3xl font-bold mb-8 bg-gradient-to-r from-amber-700 to-amber-900 bg-clip-text text-transparent"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -138,7 +142,7 @@ const About = () => {
             Discover the Latest Trending Recipes
           </motion.h3>
           <motion.button
-            className="bg-black text-amber-400 px-8 py-3 rounded-lg hover:bg-amber-600 hover:text-white transition-all"
+            className="bg-gradient-to-r from-amber-700 to-amber-900 text-white px-8 py-3 rounded-lg hover:shadow-lg transition-all duration-300"
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.95 }}
           >
